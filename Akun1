@@ -1,0 +1,14 @@
+proxies:
+  - name: Akun 1
+    server: quiz.vidio.com
+    port: 443
+    type: trojan
+    password: vvip-p1anlove
+    skip-cert-verify: false
+    sni: id6tr.servervip.us.kg
+    network: ws
+    ws-opts: 
+      path: trojan
+      headers: 
+        Host: id6tr.servervip.us.kg
+    udp: true
