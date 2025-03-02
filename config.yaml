@@ -1,4 +1,4 @@
-mode: rule
+smode: rule
 allow-lan: true
 unified-delay: true
 bind-address: '*'
@@ -73,6 +73,7 @@ proxies:
 proxy-groups:
 - name: "Back 🔙"
   type: fallback
+  behavior: classical
   url: https://raw.githubusercontent.com/piyanlove/Akun1/refs/heads/main/Akun1
   interval: 300
   use:
@@ -80,6 +81,7 @@ proxy-groups:
 proxy-providers:
   VPN:
     type: http
+    behavior: classical
     path: ./proxy_provider/Akun1.yaml
     health-check:
       enable: true
