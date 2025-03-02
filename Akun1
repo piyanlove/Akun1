@@ -1,5 +1,5 @@
 proxies:
-  - name: Akun 1
+  - name: Akun 1 git
     server: id7tr.jagoanvip.xyz
     port: 443
     type: trojan
