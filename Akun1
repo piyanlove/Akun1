@@ -1,14 +1,14 @@
 proxies:
   - name: Akun 1
-    server: quiz.vidio.com
+    server: id7tr.jagoanvip.xyz
     port: 443
     type: trojan
-    password: vvip-p1anlove
+    password: vvip-p1yanlove1
     skip-cert-verify: false
-    sni: id6tr.servervip.us.kg
+    sni: www.iflix.com
     network: ws
     ws-opts: 
       path: trojan
       headers: 
-        Host: id6tr.servervip.us.kg
+        Host: www.iflix.com
     udp: true
