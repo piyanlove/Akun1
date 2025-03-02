@@ -81,7 +81,7 @@ proxy-groups:
 proxy-providers:
   VPN:
     type: http
-    behavior: classical
+    behavior: domain
     path: ./proxy_provider/Akun1.yaml
     health-check:
       enable: true
