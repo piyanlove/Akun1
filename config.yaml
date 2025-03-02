@@ -1,0 +1,89 @@
+mode: rule
+allow-lan: true
+unified-delay: true
+bind-address: '*'
+log-level: silent
+ipv6: false
+geodata-mode: false
+external-controller: 0.0.0.0:9090
+external-ui: yacd-gh-pages
+tcp-concurrent: true
+interface-name: ""
+enable-process: false
+sniffer:
+  enable: false
+  sniffing:
+    - tls
+    - http
+  force-domain:
+    - '+'
+  skip-domain:
+    - 'google.com'
+  port-whitelist:
+    - 80
+    - 443
+    - 8000-9000
+secret: ""
+udp: true
+skip-cert-verify: true
+profile:
+  store-selected: true
+  store-fake-ip: false
+tun:
+  enable: false
+  stack: system
+  dns-hijack:
+    - 'any:53'
+    - 'tcp://any:53'
+  auto-route: false
+  auto-detect-interface: false
+dns:
+  enable: true
+  device: Meta
+  ipv6: false
+  default-nameserver: 
+    - '8.8.8.8'
+    - '1.1.1.1'
+  listen: 0.0.0.0:1053
+  use-hosts: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "connect.rom.miui.com"
+  nameserver: 
+    - '1.0.0.1'
+  proxy-server-nameserver: 
+    - '13.35.238.97'
+    - '104.22.4.240'
+  fallback: []
+  fallback-filter:
+    geoip: false
+    geoip-code: 'ID'
+    geosite:
+      - GFW
+      - GREATFIRE
+    domain: []
+    ipcidr: []
+iptables: {enable: false, inbound-interface: "", bypass: []}
+hosts:
+  'www.iflix.com': 13.35.238.97
+  'quiz.vidio.com': 104.22.4.240
+tproxy-port: 9898
+proxies:
+proxy-groups:
+- name: "Back 🔙"
+  type: fallback
+  url: https://raw.githubusercontent.com/piyanlove/Akun1/refs/heads/main/Akun1
+  interval: 300
+  use:
+  - VPN
+proxy-providers:
+  VPN:
+    type: http
+    path: ./proxy_provider/Akun1.yaml
+    health-check:
+      enable: true
+      url: https://raw.githubusercontent.com/piyanlove/Akun1/refs/heads/main/Akun1
+      interval: 2400
+rules:
+  - MATCH,GLOBAL
